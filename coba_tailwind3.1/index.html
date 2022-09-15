@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Tailwind 3.1</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<!-- perbedaan utama di tailwindCondig.js ada import untuk membantu method yang ada -->
+<body>
+    <h1 class="text-5xl text-hijau">Hello tailwindcss 3.1</h1>
+    <div class="kotak">Ini tulisan</div>
+
+    <!-- merubah tema warna dan transparansi -->
+
+    <!-- membuat tema warna -->
+    <div class="flex items-center justify-center h-80 bg-gray-100">
+        <!-- kita ganti bg sesuai settingkita di input.css dan tailwinds.config -->
+        <div class="p-8 py-6 mt-4 text-left shadow-lg rounded-md bg-tema/10">
+            <h3 class="text-2xl font-bold text-center text-tema/100">My Form</h3>
+            <form action="">
+                <div class="mt-4">
+                    <div>
+                        <label class="block text-tema/80" for="email">Email</label>
+                        <input type="text" placeholder="masukan email..." class="text-sm w-full px-4 py-2 mt-2 border rounded-md transition ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tema/80">
+                    </div>
+                    <div class="flex items-baseline justify-center">
+                        <button class="px-6 py-2 mt-4 text-white transition ease-in-out bg-tema/80 rounded-md hover:bg-tema//100">Kirim</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Border Spacing -->
+    <div class="px-4 py-8 sm:px-8">
+        <!-- border-separate untuk pemisah -->
+        <table class="w-full text-sm border-separate border-spacing-1">
+            <thead class="bg-slate-100 dark:bg-slate-700">
+                <tr class="text-center">
+                    <th
+                    class="w-1/2 border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200">
+                        Provinsi
+                    </th>
+                    <th
+                    class="w-1/2 border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200">
+                        Ibu Kota
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-whte">
+                <tr class="text-center">
+                    <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Jawa Barat
+                    </td>
+                    <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Bandung</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Jawa Tengah</td>
+                    <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Semarang</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Jawa Timur</td>
+                    <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Surabaya</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Arbitrary Variant  -->
+    <!-- [&*] artinya element apapun didalemnya -->
+    <!-- [&>li:first-child] artinya untuk element pertama; last => terahir; nth-child(4) => angka dimana saja -->
+
+    <!-- [&>li:nth-child(4)>div>span:nth-child(2)]:bg-emerald-400  ini akan merubah kotk 4 di tengah -->
+    <!-- [&>li:nth-child(4):hover>div>span:nth-child(1)]:bg-red-400  ini ditambah hover -->
+    <ul class="w-2/3 m-auto mb-[500px] [&>*]:text-pink-700 [&>*]:bg-pink-300 [&>li:nth-child(2)]:bg-sky-100  [&>li:nth-child(4)>div>span:nth-child(2)]:bg-emerald-400 [&>li:nth-child(4)>div>span:nth-child(2):hover]:bg-purple-400 [&>li:nth-child(4):hover>div>span:nth-child(1)]:bg-red-400">
+        <li class="bg-teal-100 rounded-lg  py-3 px-6 mb-2 text-base text-teal-700 text-center">
+            item 1
+        </li>
+        <li class="bg-teal-100 rounded-lg  py-3 px-6 mb-2 text-base text-teal-700 text-center">
+            item 2
+        </li>
+        <li class="bg-teal-100 rounded-lg  py-3 px-6 mb-2 text-base text-teal-700 text-center">
+            item 3
+        </li>
+        <li class="bg-teal-100 rounded-lg  py-3 px-6 mb-2 text-base text-teal-700 text-center">
+            <div>
+                <span class="inline-block w-10 h-10 bg-sky-400"></span>
+                <span class="inline-block w-10 h-10 bg-sky-400"></span>
+                <span class="inline-block w-10 h-10 bg-sky-400"></span>
+            </div>
+        </li>
+        <li class="bg-teal-100 rounded-lg  py-3 px-6 mb-2 text-base text-teal-700 text-center">
+            item 5
+        </li>
+    </ul>
+    
+
+</body>
+</html>

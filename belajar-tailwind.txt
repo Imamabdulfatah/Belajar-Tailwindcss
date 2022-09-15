@@ -1,0 +1,34 @@
+Menggunakan tailwinds css
+
+	1} INSTALASI
+1. bisa menggunakan play cdn diweb tailwindcss tinggal copy script tapi banyak kurang di library
+2. memakai tailwind CLI menggunakan npm node.js
+   A) npm init -y "agar semua pertanyaan di ya kan"
+   B) npm install -D tailwindcss postcss autoprefixer "masih ada warning maka dwonload defedency dulu"
+   C) npx tailwind init
+   D) tambahkan di tailwind.config.js  content './public/**/*.{html,js}'  "isi sesuai default web""maksudnya
+         yaitu hanya dieksekusi file html atau js"
+   E) buatfolder public untuk html src utuk input.css 
+   F) npx tailwindcss -i ./src/css/input.css/input.css  -o ./public/css/style.css -- watch	
+   G) Cara melihat referenci    ctrl spaci
+   H) class yang ditulis akan dicatat di style.css dibawah dan berubah
+   I) cara menghapus style yag ditulis tinggal save di tailwind.config.js
+   J) agar gampang diaktifkan di script di package.json dihapus diganti
+       "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch"
+   K) aktifkan tinggal npm run dev
+   L)  cara final file agar lebih kecil yaitu "npx tailwindcss -o ./public/css/final.css --minify "
+
+"node -v"  melihat versi
+
+	2} BASIC UTILITY
+1. Spacing& sizing
+2. Typografy
+3. Colors
+
+menggunakan cdn tapi ada reference
+1. copy cdn di head "hhtps://cdn.tailwindcss.com"
+
+Mendownload pritier (agar rapih di code) sesuai urutan
+- { npm i -D prettier-plugin-tailwindcss }
+
+

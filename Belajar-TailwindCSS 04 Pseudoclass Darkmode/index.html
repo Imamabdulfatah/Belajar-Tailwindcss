@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                    13: '3,25rem'
+                    }, 
+                    fontFamily: {
+                        ubuntu: ['Ubuntu'],
+                    },
+                    colors: {
+                        wpu: '#bada55',
+                        kopi: '#c0ffe',
+                    }
+                },
+            },
+        };
+    </script>
+
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+    </style>
+
+    <title>Belajar tailwinds</title>
+    <!-- membuat garis untuk mempermudah pading dan margin -->
+   
+</head>
+<body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="mb-10 text-center font-bold text-5xl">Mantap Jiwa <span class="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">TailwindCSS</span></h1>
+   
+    <!-- lihat font di font.google.com -->
+    <!-- copy link diatas head dan masukan di extend setting -->
+    <section class="mb-8 font-ubuntu max-w-3xl mx-auto ">
+        <h2 class="mb-4 text-lg font-semibold">Typografy pada tailwindcss</h2>
+        <div class="mb-4 text-gray-500">By <a href="#" class="text-gray-600">udin nganga</a>, 03 maret 2003</div>
+        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing <a href="#" class="underline font-semibold text-blue-600">elit</a> . A illum porro natus quisquam consequatur obcaecati at tenetur, illo accusantium sint atque quae ab nemo, ipsam dolorum laudantium doloremque delectus velit?</p>
+
+        <blockquote class="mb-4 italic font-thin text-xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vero facilis eos minima ducimus nam cumque voluptatem itaque sequi voluptatum, consequatur et dicta illo accusamus accusantium, sit iure porro qui?</p>
+    </section>
+
+    <!-- bg-fixed, scrool, local -->
+    <div class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-fixed" style="background-image: url('https://source.unsplash.com/1000x600?computer');">
+        <p class="p-5 text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis vitae est fugit dolorem harum esse ad placeat aut nesciunt ipsa dignissimos consequuntur distinctio laboriosam assumenda blanditiis, ea perspiciatis! Illum, aut.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eum ut natus, magnam aliquam tempore vero eius explicabo deleniti veritatis dignissimos non porro repellendus quae inventore atque. Soluta, accusantium possimus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium accusamus pariatur voluptatum aliquam! Quos quod totam hic fugiat repellat aliquam tempora assumenda aperiam obcaecati asperiores recusandae quibusdam, voluptatem blanditiis?
+        </p>
+    </div>
+
+    <!-- bg-cover, refeat, contain -->
+
+    <!-- foto make border -->
+    <div class="mt-8 max-w-xl mx-auto h-96 bg-slate-300 bg-cover bg-no-repeat bg-center rounded-2xl border-8 border-slate-500 shadow-lg" style="background-image: url(./img/1.jpg);">
+    </div>
+
+    <!-- foto tembuspandang bayangan -->
+    <div class="mt-8 max-w-xl mx-auto h-96 bg-slate-300 bg-cover bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-600 opacity-90 overflow-hidden border-8" style="background-image: url(./img/2.jpg);"> 
+        <!-- nyoba nimpa gambar -->
+        <div class="w-full h-full bg-blue-300 mix-blend-darken"></div>
+    </div>
+
+    <!-- foto tembus kuning -->
+    <div class="mt-8 max-w-xl mx-auto h-96 bg-yellow-600 bg-cover bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-600 overflow-hidden border-8 bg-blend-overlay" style="background-image: url(./img/2.jpg);"> 
+        <!-- nyoba nimpa gambar
+        <div class="w-full h-full bg-blue-300 mix-blend-darken"></div> -->
+    </div>
+
+    <!-- foto blur -->
+    <div class="mt-8 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500  overflow-hidden flex" style="background-image: url(./img/1.jpg);">
+        <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full">
+        </div>
+    </div>
+
+
+    <!-- darkmode -->
+    <hr class="my-20">
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle">
+
+                </div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <!-- tombol simpan -->
+    <button class="my-10 bg-sky-500 px-5 rounded-full text-white font-inter block mx-auto font-semibold hover:bg-sky-600 active:bg-sky-700 focus:ring 
+    focus:ring-sky-300
+    dark:bg-slate-300 
+    dark:text-slate-800 
+    dark:hover:text-slate-900
+    dark:hover:bg-slate-100
+    "> Simpan</button>
+
+    <!-- email ketik text -->
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto font-inter shadow-md hover:bg-sky-500 group">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+        <p class="text-slate-700 
+        group-hover:text-white 
+        selection:bg-lime-300 
+        selection:text-slate-900 
+        first-line:uppercase 
+        first-line:tracking-widest 
+        first-letter:text-7xl 
+        first-letter:float-left 
+        first-letter:mr-3 
+        dark:group-hover:text-teal-800">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi reprehenderit in mollitia vel dolorum non consequatur debitis cumque neque aut libero odit obcaecati voluptatibus quisquam sit, minus sequi provident laudantium!
+        </p> 
+    </div>
+
+    <div class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5 ">
+        <form action="">
+            <label for="email">
+                <span class="block font-semibold mb-1 text-slate-600 
+                after:content-['*']
+                after:text-pink-500 
+                after:ml-0.5">Email</span>
+
+                <input type="email" id="email" placeholder="masukan email...." class=" px-3 py-2 border shadow rounded w-full text-sm 
+                placeholder:text-slate-600
+                focus-ring-1
+                focus:ring-sky-500 
+                focus:border-sky-500
+                invalid:text-pink-700
+                invalid:focus:ring-pink-700
+                invalid:focus:border-pink-700 peer"
+                />
+                <p class="text-sm m-1 text-pink-700
+                invisible peer-invalid:visible ">Tidak Valid
+                </p>
+            </label>
+        </form>
+    </div>
+    <script>
+        const checkbox = document.querySelector
+        ('#toggle');
+        const html = document.querySelector('html');
+        checkbox.addEventListener('click', function( )
+        {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+
+.navbar-fixed {
+    /* z-untuk action jika discroll dan opacity tembus pandang */
+    @apply fixed z-[9999] bg-white bg-opacity-70;
+    /* karna engga ada di tailwind backdrop kita tulis seperti ini */
+    backdrop-filter:blur(5px);
+    /* membuat garis bening */
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/* cari pass anaknya span ke 1*/
+.hamburger-active > span:nth-child(1) {
+    /* origin untuk  atas agar turun buka memutar ditengah*/
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    /* tengah menghilang*/
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    /* origin untuk  bawah agar naik buka memutar ditengah*/
+    @apply  -rotate-45;
+}
+/* elemen origin dipindahkan ke html agar tidakhilang */
+

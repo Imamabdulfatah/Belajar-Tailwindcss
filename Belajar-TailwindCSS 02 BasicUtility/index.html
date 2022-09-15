@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                    13: '3,25rem'
+                    }, 
+                    fontFamily: {
+                        ubuntu: ['Ubuntu'],
+                    },
+                    colors: {
+                        wpu: '#bada55',
+                        kopi: '#c0ffe',
+                    }
+                },
+            },
+        };
+    </script>
+    <title>Belajar tailwinds</title>
+    <!-- membuat garis untuk mempermudah pading dan margin -->
+    <style type="text/tailwindcss">
+        * {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center font-bold text-5xl">Mantap Jiwa <span class="bg-gradient-to-r from-blue-400 to-teal-500 bg-clip-text text-transparent">TailwindCSS</span></h1>
+   
+    <section class="mb-10 bg-green-200">
+        <h2 class="bg-kopi">Spacing</h2>
+        <!-- m-1 = 0,25 rem = 4px -->
+        <div class="m-4">Margin</div> 
+        <!-- buat kanan -->
+        <div class="-mr-8 bg-purple-400">Margin</div>
+         <!--buat x horizontal kirikanan  -->
+        <div class="mx-4">Margin</div>
+        <!-- buat y atas bawah vertikal -->
+        <div class="my-4">Margin</div>
+        <div class="m-auto">Margin</div>
+    </section>
+
+    <section class="mb-10 ">
+        <h2 class="bg-wpu">padding</h2>
+        <div class="py-4 bg-orange-400">Lingkaran</div>
+    </section>
+
+    <section class="mb-10 bg-gradient-to-r from-cyan-500 via-red-400 to-yellow-500 ">
+        <h2>Sizing</h2>
+        <div class="w-16">Kotak 1</div>
+        <div class="w-1/2">Kotak 2</div>
+        <div class="max-w-xs ">Kotak 3</div>
+    </section>
+
+    <!-- lihat font di font.google.com -->
+    <!-- copy link diatas head dan masukan di extend setting -->
+    <section class="mb-10 font-ubuntu max-w-3xl mx-auto ">
+        <h2 class="mb-4 text-lg font-semibold">Typografy pada tailwindcss</h2>
+        <div class="mb-4 text-gray-500">By <a href="#" class="text-gray-600">udin nganga</a>, 03 maret 2003</div>
+        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing <a href="#" class="underline font-semibold text-blue-600">elit</a> . A illum porro natus quisquam consequatur obcaecati at tenetur, illo accusantium sint atque quae ab nemo, ipsam dolorum laudantium doloremque delectus velit?</p>
+
+        <blockquote class="mb-4 italic font-thin text-xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vero facilis eos minima ducimus nam cumque voluptatem itaque sequi voluptatum, consequatur et dicta illo accusamus accusantium, sit iure porro qui?</p>
+    </section>
+    
+</body>
+</html>
